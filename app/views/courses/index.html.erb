@@ -1,0 +1,9 @@
+<% @courses.each do |course| %>
+  <%= course.name %>: <%= course.number_enrolled %>
+  <br>
+  <% course.residents.sort_alphabetical.each do |resident| %>
+    -<%= resident.name %>
+    <br>
+  <% end %>
+  <br>
+<% end %>

@@ -1,0 +1,8 @@
+<% @residents.each do |resident| %>
+  Name: <%= resident.name %>,
+  Age: <%= resident.age %>,
+  Occupation: <%= resident.occupation %>
+  <br>
+<% end %>
+
+Average Age: <%= @residents.average_age %>

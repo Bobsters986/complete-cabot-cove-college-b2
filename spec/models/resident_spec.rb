@@ -13,4 +13,17 @@ RSpec.describe Resident, type: :model do
     it {should have_many(:courses).through(:resident_courses)}
   end
 
+  describe '#class_methods' do
+    before do
+      Resident.create!(name: "Max Power", age: 5, occupation: "villain")
+      Resident.create!(name: "Joe", age: 5, occupation: "villain")
+    end
+
+    describe '.average_age' do
+      it 'should return the average age' do
+        expect(Resident.average_age).to eq(5)
+      end
+    end
+  end
+
 end
