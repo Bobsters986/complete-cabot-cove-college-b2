@@ -7,7 +7,6 @@ RSpec.describe Resident, type: :feature do
 
   it 'shows all the attributes of all residents' do
     visit '/residents'
-    save_and_open_page
 
     expect(page).to have_content("Name: #{max.name}")
     expect(page).to have_content("Age: #{max.age}")

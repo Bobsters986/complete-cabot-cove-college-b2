@@ -15,5 +15,8 @@ RSpec.describe '/courses/index', type: :feature do
     visit '/courses'
     
     expect(page).to have_content("#{knitting.name}: #{knitting.residents.size}")
+    expect(page).to have_content("Knitting: 3")
+    expect(page).to have_content("#{skydiving.name}: #{skydiving.residents.size}")
+    expect(page).to have_content("Skydiving: 1")
   end
 end

@@ -15,13 +15,13 @@ RSpec.describe Resident, type: :model do
 
   describe '#class_methods' do
     before do
-      Resident.create!(name: "Max Power", age: 5, occupation: "villain")
+      Resident.create!(name: "Max Power", age: 10, occupation: "villain")
       Resident.create!(name: "Joe", age: 5, occupation: "villain")
     end
 
     describe '.average_age' do
       it 'should return the average age' do
-        expect(Resident.average_age).to eq(5)
+        expect(Resident.average_age).to eq(7.5)
       end
     end
   end

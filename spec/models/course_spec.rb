@@ -22,8 +22,11 @@ RSpec.describe Course, type: :model do
       it 'should return the size of the residents that are enrolled' do
         expect(knitting.number_enrolled).to_not eq(0)
         expect(knitting.number_enrolled).to eq(1)
+
+        knitting.residents.create!(name: "Less Power", age: 40, occupation: "henchman")
+
+        expect(knitting.number_enrolled).to eq(2)
       end
     end
   end
-
 end

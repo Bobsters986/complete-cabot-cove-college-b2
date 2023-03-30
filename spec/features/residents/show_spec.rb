@@ -15,7 +15,7 @@ RSpec.describe Resident, type: :feature do
 
     expect(page).to have_content("#{max.name}")
     expect(page).to have_content("Courses:")
-    expect(page).to have_content("- #{skydiving.name}")
-    expect(page).to have_content("- #{scubadiving.name}")
+    expect(page).to have_content("#{skydiving.name}")
+    expect(page).to have_content("#{scubadiving.name}")
   end
 end
